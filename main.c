@@ -17,7 +17,7 @@ void cariMinMax(matriks m);
 
 int main()
 {
-    matriks segitiga;
+    matriks m;
     int ordo;
     int x;
 
@@ -30,13 +30,13 @@ int main()
         printf("Masukkan Ordo Matriks : ");
         scanf(" %d", &ordo);
     } while (ordo < 2 || ordo > 100);
-    createMatriks(&segitiga, ordo);
-    appendMatriks(&segitiga);
-    showMatriks(segitiga);
+    createMatriks(&m, ordo);
+    appendMatriks(&m);
+    showMatriks(m);
 
     printf("Nilai X yang dicari dalam matriks : ");
     scanf(" %d", &x);
-    if (cariNilai(segitiga, x))
+    if (cariNilai(m, x))
     {
         puts("Nilai X tedapat pada matriks");
     }
@@ -45,7 +45,7 @@ int main()
         puts("Nilai X tidak ditemukan dalam matriks");
     }
     puts("");
-    cariMinMax(segitiga);
+    cariMinMax(m);
     puts("");
 }
 
